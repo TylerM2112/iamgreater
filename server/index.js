@@ -1,18 +1,31 @@
+
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const massive = require('massive');
-// const bc = require('./controllers/bin_controller')
+const ac = require('./controllers/auth_controller');
+const pc = require('./controllers/property_controller');
 const cors = require('cors');
-
-require('dotenv').config();
-
+const session = require('express-session');
+// const { createInitialSession } = require('./controllers/middlewares/session');
 const app = express();
+
 app.use(bodyParser.json());
 app.use(cors());
 
 // massive(process.env.CONNECTION_STRING).then(dbInstance => {
 //     app.set('db', dbInstance);
 // })
+
+// app.use(session({
+//     secret: "tyler",
+//     resave: false,
+//     saveUnitialized: true,
+//     cookie: {
+//         age: 10000
+//     }
+// }))
+// app.use(createInitialSession);
 
 
 // app.get('/api/bin/:id', bc.getBin)
