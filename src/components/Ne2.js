@@ -6,7 +6,7 @@ class Ne2 extends Component {
     constructor() {
         super();
         this.state = {
-            question2: "Welcome Tyler! Please let us know what you are experiencing so that we may best assist you:",
+            question2: "2/4 Welcome Tyler! Please let us know what you are experiencing so that we may best assist you:",
         }
     }
     render() {

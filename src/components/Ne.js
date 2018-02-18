@@ -6,7 +6,7 @@ class Ne extends Component {
     constructor() {
         super();
         this.state = {
-            question1: "Please tell us your first name:",
+            question1: " 1/4 Please tell us your first name:",
         }
     }
     render() {
