@@ -1,5 +1,5 @@
 const initialState = {
-    
+
 };
 
 // const UPDATE_USERNAME = "UPDATE_USERNAME";
