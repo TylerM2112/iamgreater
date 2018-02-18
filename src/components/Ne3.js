@@ -25,6 +25,7 @@ class Ne3 extends Component {
                                 <label>State:</label>
                                 <input />
                             </div>
+                            <Link to="/ne2"><button type="submit">Back</button></Link>
                             <Link to="/ne4"><button type="submit">Next</button></Link>
                         </fieldset>
                     </div>

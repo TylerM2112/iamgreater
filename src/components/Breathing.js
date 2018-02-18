@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import '../App.css';
+import { Link } from 'react-router-dom';
 
 
-class Breathing extends Component{
+class Breathing extends Component {
   constructor(props) {
     super(props);
 
@@ -26,7 +27,7 @@ class Breathing extends Component{
     document.getElementById("range").innerText = `${e} seconds for each breath.`;
     this.setState({ rangeInput: e });
     // console.log(e);
-    document.getElementById("circle").style.animationDuration = `${e*2}s`;
+    document.getElementById("circle").style.animationDuration = `${e * 2}s`;
   }
 
   timerCounter(e) {
@@ -39,15 +40,15 @@ class Breathing extends Component{
     // document.getElementById("circle").style.animation = "animation: infinite"
     document.getElementById("circle").style.animationDuration = `${this.state.rangeInput}s`;
     document.getElementById("circle").style.webkitAnimationName = "breathe";
-    let timer = (this.state.timerInput * 60)/this.state.rangeInput;
+    let timer = (this.state.timerInput * 60) / this.state.rangeInput;
     // console.log(timer);
     document.getElementById("circle").style.webkitAnimationIterationCount = timer;
     // let i = timer;
     let time = (this.state.timerInput * 60) * 1000;
     console.log(time);
-    setTimeout(()=>this.toast(),1000)
-    }
-    
+    setTimeout(() => this.toast(), 1000)
+  }
+
   toast() {
     // alert("hi")
     this.document = window;
@@ -63,44 +64,44 @@ class Breathing extends Component{
     document.getElementById("doneTimer").style.webkitAnimationName = "doneTimerEnd"
     document.getElementById("doneTimer").style.animationDuration = "1.5s"
     this.document = window;
-    setTimeout(()=>document.getElementById("doneTimer").style.display = "none",1500)
+    setTimeout(() => document.getElementById("doneTimer").style.display = "none", 1500)
   }
 
-  
+
   render() {
     return (
       <div>
-      <Header />    
-      <div className="breathingContainer" >
-        <div className="circleContainer">
-          <div id="circle"><div><div id="breatheText">breathe</div></div> </div>
-        </div>  
-      <div class="inputDiv">
-        <label id="range" ></label>
-        
-          <br />
-        <br />  
-        <input className="rangeInput" min="3" max="10" onChange={e => this.rangeCounter(e.target.value)} type="range" />
-        <br />
-        <label id="timerInput"></label>
-          <br />
-          <br />   
-        <input className="rangeInput" min="2" max="5" type="range" id="timer" onChange={e=>this.timerCounter(e.target.value)}/>
-        <br/>
-        <button className="readyBtn" onClick={e => this.goBreathe()} >You ready?</button>
+        <Header />
+        <div className="breathingContainer" >
+          <div className="circleContainer">
+            <div id="circle"><div><div id="breatheText">breathe</div></div> </div>
+          </div>
+          <div class="inputDiv">
+            <label id="range" ></label>
 
-          <div id="doneTimer">
-            <div className="exitBtn"><button onClick={e => this.removeDoneTimer()}>X</button></div>     
-          <div >
-            You did it!
             <br />
-            Still need to talk? <a href="#" >Click Here.</a>
+            <br />
+            <input className="rangeInput" min="3" max="10" onChange={e => this.rangeCounter(e.target.value)} type="range" />
+            <br />
+            <label id="timerInput"></label>
+            <br />
+            <br />
+            <input className="rangeInput" min="2" max="5" type="range" id="timer" onChange={e => this.timerCounter(e.target.value)} />
+            <br />
+            <button className="readyBtn" onClick={e => this.goBreathe()} >You ready?</button>
+
+            <div id="doneTimer">
+              <div className="exitBtn"><button onClick={e => this.removeDoneTimer()}>X</button></div>
+              <div >
+                You did it!
+            <br />
+                Still need to talk? <Link to="/step1" >Click Here.</Link>
+              </div>
+
             </div>
-          
-        </div>  
-      </div>
-        </div> 
+          </div>
         </div>
+      </div>
     );
   }
 }

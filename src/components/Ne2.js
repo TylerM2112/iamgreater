@@ -38,6 +38,7 @@ class Ne2 extends Component {
                                 <br />
                                 <input id="otherInput" name="interest" value="Type here..." />
                             </div>
+                            <Link to="/ne"><button type="submit">Back</button></Link>
                             <Link to="/ne3"><button type="submit">Next</button></Link>
                         </fieldset>
                     </div>

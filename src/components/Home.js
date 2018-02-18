@@ -18,10 +18,10 @@ class Home extends Component{
         <div>  
         <Link to="/step1/"><button className="bigBtn">Get Help Now</button></Link>
           <button className="bigBtn">Start Your Journey</button>
+          </div>
           <div>
             <Link to="/breathing" > <button className="bigBtn">Breathing Exercise</button> </ Link>
-          </div>  
-        </div>  
+          </div>   
       </div>  
     )
   }

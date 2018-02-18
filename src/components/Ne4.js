@@ -29,6 +29,7 @@ class Ne4 extends Component {
                             <input type="checkbox" />
                                 <label>Find Online Resources</label>
                             </div>
+                            <Link to="/ne3"><button type="submit">Back</button></Link>
                             <Link to="/breathing"><button type="submit">Next</button></Link>
                         </fieldset>
                     </div>
