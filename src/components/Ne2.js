@@ -6,7 +6,7 @@ class Ne2 extends Component {
     constructor() {
         super();
         this.state = {
-            question2: "Please provide a location:",
+            question2: "Welcome Tyler! Please let us know what you are experiencing so that we may best assist you:",
         }
     }
     render() {
@@ -14,16 +14,29 @@ class Ne2 extends Component {
             <div>
                 <Header />
                 <div className="questionairre">
-                    <div className="q2">
+                <div className="q2">
                         <fieldset>
                             <legend><strong>{this.state.question2}</strong></legend>
                             <div>
-                                <label>City:</label>
-                                <input />
+                                <input type="checkbox" id="depression" name="interest" />
+                                <label for="depression">Depression</label>
                             </div>
                             <div>
-                                <label>State:</label>
-                                <input />
+                                <input type="checkbox" id="anxiety" name="interest" />
+                                <label for="anxiety">Anxiety</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="substance" name="interest" />
+                                <label for="substance">Substance Abuse</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="other" name="interest" />
+                                <label>Other</label>
+                            </div>
+                            <div>
+                                <label for="otherInput">If other, please describe what you are experiencing as best as you can:</label>
+                                <br />
+                                <input id="otherInput" name="interest" value="Type here..." />
                             </div>
                             <Link to="/ne3"><button type="submit">Next</button></Link>
                         </fieldset>
@@ -35,4 +48,3 @@ class Ne2 extends Component {
 }
 
 export default Ne2;
-
