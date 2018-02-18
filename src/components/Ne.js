@@ -6,7 +6,7 @@ class Ne extends Component {
     constructor() {
         super();
         this.state = {
-            question1: " 1/4 Please tell us your first name:",
+            question1: "Please tell us your first name:",
         }
     }
     render() {
@@ -14,8 +14,12 @@ class Ne extends Component {
             <div>
                 <Header />
                 <div className="questionairre">
+                    <label className="qNum">1/4</label>
+                    <label className="q"><strong>{this.state.question1}</strong></label> 
+                    <input className="qInput" />
+                    <Link to="/ne2"><button className="nextBtn" type="submit">Next</button></Link>
 
-                    <div className="q1">
+                    {/* <div className="q1">
                         <fieldset>
                             <legend><strong>{this.state.question1}</strong></legend>
                             <div>
@@ -26,7 +30,7 @@ class Ne extends Component {
                                 <Link to="/ne2"><button type="submit">Next</button></Link>
                             </div>
                         </fieldset>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         )

@@ -1,8 +1,9 @@
+
 .App {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
 }
-
+ 
 .App-logo{
   position:absolute;
   top:-25px;
@@ -11,13 +12,13 @@
   /* margin:0 auto; */
   /* margin-top:-25px; */
 }
-
+ 
 .App-logo:hover{
   filter:invert(1)
 }
-
-
-
+ 
+ 
+ 
 .App-header {
   background-color: #fc9e46;
   height: 100px;
@@ -25,21 +26,21 @@
   color: white;
   position:relative;
 }
-
+ 
 .App-title {
   font-size: 1.5em;
 }
-
+ 
 .App-intro {
   font-size: large;
 }
-
+ 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-
-
+ 
+ 
 @keyframes breathe{
   0%{transform:scale(1,1); background-color:blue; content:"hi";}
   50%{transform:scale(2,2); background-color:yellow; content:"bye";}
@@ -50,13 +51,13 @@
   margin-top: 20px;
   padding: 20px;
 }
-
+ 
 .breathingContainer{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin: auto;
 }
-
+ 
 #circle{
   height:200px;
   width:200px;
@@ -66,21 +67,21 @@
   /* transform:scale(2,2); */
   /* animation: breathe infinite; */
   /* border:solid black 1px; */
-
+ 
 }
-
+ 
 .rangeInput{
   border:solid black 1px;
   background-color:black;
 }
-
+ 
 #breatheText{
   padding-top:45%;
   color:white;
   font-size:20px;
   letter-spacing:3px;
 }
-
+ 
 #doneTimer{
   position:absolute;
   top:100px;
@@ -96,48 +97,48 @@
   overflow:hidden;
   /* position:relative; */
 }
-
+ 
 @keyframes doneTimer{
   0%{height:0; opacity: 0;}
   100%{height:70px; opacity:100;}
    /* 100%{height:0px;}  */
 }
-
+ 
 @keyframes doneTimerEnd{
   0%{height:70px; opacity:100;}
   100%{height:0px; opacity: 0;}
 }
-
+ 
 #doneTimer > div{
   margin:0 auto;
 }
-
+ 
 #doneTimer a{
   text-decoration: none;
   color:white;
 }
-
+ 
 #doneTimer a:hover{
   text-decoration-line: underline;
 }
-
+ 
 #doneTimer .exitBtn{
   float:right;
-
+ 
 }
-
+ 
 .exitBtn button{
   background-color:transparent;
   color:white;
   border:none;
   float:right;
 }
-
+ 
 .exitBtn button:hover{
   cursor:pointer;
   text-decoration-line: underline;
 }
-
+ 
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   border: 1px solid #000000;
@@ -149,7 +150,7 @@ input[type=range]::-webkit-slider-thumb {
   margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
   /* box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; Add cool effects to your sliders! */
 }
-
+ 
 .readyBtn{
   margin-top:20px;
   background-color:#3b3dcc;
@@ -160,12 +161,12 @@ input[type=range]::-webkit-slider-thumb {
   color:white;
   font-weight:bold;
 }
-
+ 
 label{
   font-size:20px;
   margin-bottom:100px;
 }
-
+ 
 .inputDiv{
   border-left:solid #aaa 1px;
   /* padding:50px 0;
@@ -175,35 +176,37 @@ label{
   float:right;
   flex: 1;
   padding-bottom: 70px;
+  margin-top: 100px;
+  padding: 70px;
 }
-
+ 
 .linksDiv{
   position: absolute;
   top: 10px;
   right: 5px;
 }
-
+ 
 .linksDiv a{
   color:white;
   text-decoration: none;
   font-weight: bold;
   margin-right:10px;
 }
-
+ 
 .linksDiv a:hover{
   color:rgb(173, 228, 253)
 }
-
+ 
 .mainContainer > div{
   display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-around;
-	align-items: stretch;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: stretch;
   align-content: flex-start;
   margin-top:100px;
 }
-
+ 
 .mainContainer .bigBtn{
   /* flex:2; */
   /* padding: 100px; */
@@ -220,38 +223,38 @@ label{
   border:solid white 3px;
   font-variant: small-caps;
 }
-
+ 
 .mainContainer .bigBtn:hover{
   cursor: pointer;
   background-color:#6366f5;
 }
-
+ 
 .mainContainer .bigBtn:active{
   /* border:solid white 5px; */
   box-shadow:3px 3px 3px #333;
   font-size:33px;
 }
-
+ 
 a{
   text-decoration: none;
   color:white;
 }
-
+ 
 .bigHeader{
   background-color:#fc9e46;
   background: -moz-linear-gradient(left, #fc9e46 0%, #ffa755 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(left, #fc9e46 0%,#ffa755 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to right, #fc9e46 0%,#ffa755 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   height:275px;
-
+ 
 }
-
+ 
 .bigLogo{
   width:75%;
   margin-left:10px;
   margin-top:-125px;
 }
-
+ 
 .bigHeader p{
   margin-top:-150px;
   font-size:30px;
@@ -261,15 +264,15 @@ a{
 }
 .questionairre{
   display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
   width: 60%;
   margin: auto;
 }
-
+ 
 .q1{
   width: 40%;
   padding: 10px;
@@ -278,12 +281,89 @@ a{
   width: 40%;
   padding: 10px;
 }
-
-
+ 
+ 
 .q3{
   padding: 10px;
   width: 60%;
 }
+
 label{
   font-size: 15px;
+}
+ 
+.questionairre{
+  margin:0 auto;
+  padding:10px;
+  width:100%;
+}
+ 
+/* fieldset{
+  padding:50px 300px;
+}
+ 
+fieldset {
+  font-size:30px;
+}
+ 
+input{
+  width:100%;
+} */
+ 
+.qNum{
+  /* border:solid black 1px; */
+  margin:auto;
+  display:block;
+}
+ 
+.q{
+  /* border:solid black 1px; */
+  font-size:30px;
+}
+ 
+.qInput{
+  width:800px;
+  padding:50px;
+  font-size:30px;
+  border:none;
+  border-bottom:solid black 1px;
+}
+ 
+.nextBtn{
+  padding:50px 100px;
+  font-size:20px;
+  margin-top:20px;
+  background-color:#6366f5;
+  font-weight:bold;
+  color:white;
+}
+ 
+.inputCheckbox{
+  display:inline;
+  padding:10px;
+  margin:0 auto;
+  /* width */
+}
+ 
+.inputDiv{
+  text-align:left;
+}
+ 
+.qLabel{
+  /* padding:20px 50px; */
+  font-size:30px;
+  width:500px;
+}
+ 
+.qInput2{
+  width:800px;
+  padding:25px;
+  font-size:15px;
+  margin-left:-150px;
+  border:none;
+  border-bottom:solid black 1px;
+}
+ 
+.inputDiv2{
+  text-align:left;
 }

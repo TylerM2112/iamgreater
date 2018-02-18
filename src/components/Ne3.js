@@ -14,23 +14,25 @@ class Ne3 extends Component {
             <div>
                 <Header />
                 <div className="questionairre">
-                    <div className="q3">
-                        <fieldset>
-                            <legend><strong>{this.state.question3}</strong></legend>
+                    
+                    <div className="q1">
+                    <label className="qNum">2/4</label>
+                            <label className="q"><strong>{this.state.question3}</strong></label>
+                            <br />
                             <div>
-                                <label>City:</label>
-                                <input />
+                                <label className="qLabel">City:</label>
+                                <input className="qInput2"/>
                             </div>
                             <div>
-                                <label>State:</label>
-                                <input />
+                                <label className="qLabel">State:</label>
+                                <input className="qInput2"/>
                             </div>
-                            <Link to="/ne2"><button type="submit">Back</button></Link>
-                            <Link to="/ne4"><button type="submit">Next</button></Link>
-                        </fieldset>
+                            <Link to="/ne2"><button type="submit" className="nextBtn">Back</button></Link>
+                            <Link to="/ne4"><button type="submit" className="nextBtn">Next</button></Link>
+
                     </div>
-                </div>
             </div>
+            </div>    
         )
     }
 }
