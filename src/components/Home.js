@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../bigLogo.png';
+import { Link } from 'react-router-dom';
 
 class Home extends Component{
 
@@ -9,10 +10,17 @@ class Home extends Component{
         <header className="bigHeader">
           <img className="bigLogo" src={logo} alt="logo"/>
           <p>I am <strong>greater</strong> than my ups and downs.</p>
+          <div className="linksDiv">
+            <a href="#">Login</a>
+            <a href="#">FAQ</a>
+          </div>
         </header>    
         <div>  
-        <a href="/Step1/"><button className="bigBtn">Get Help Now</button></a>
+        <Link to="/step1/"><button className="bigBtn">Get Help Now</button></Link>
           <button className="bigBtn">Start Your Journey</button>
+          <div>
+            <Link to="/breathing" > <button className="bigBtn">Breathing Exercise</button> </ Link>
+          </div>  
         </div>  
       </div>  
     )

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Header from './Header';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';    
 
-class Ne extends Component {
+class Ne2 extends Component {
     constructor() {
         super();
         this.state = {
-            question1: "Please tell us your first name:",
+            question2: "Please provide a location:",
         }
     }
     render() {
@@ -14,17 +14,18 @@ class Ne extends Component {
             <div>
                 <Header />
                 <div className="questionairre">
-
-                    <div className="q1">
+                    <div className="q2">
                         <fieldset>
-                            <legend><strong>{this.state.question1}</strong></legend>
+                            <legend><strong>{this.state.question2}</strong></legend>
                             <div>
-                                <label>First name or alias:</label>
+                                <label>City:</label>
                                 <input />
                             </div>
                             <div>
-                                <Link to="/ne2"><button type="submit">Next</button></Link>
+                                <label>State:</label>
+                                <input />
                             </div>
+                            <Link to="/ne3"><button type="submit">Next</button></Link>
                         </fieldset>
                     </div>
                 </div>
@@ -33,5 +34,5 @@ class Ne extends Component {
     }
 }
 
-export default Ne;
+export default Ne2;
 

@@ -70,7 +70,7 @@ class Breathing extends Component{
   render() {
     return (
       <div>
-        <Header />
+      <Header />    
       <div className="breathingContainer" >
         <div className="circleContainer">
           <div id="circle"><div><div id="breatheText">breathe</div></div> </div>
